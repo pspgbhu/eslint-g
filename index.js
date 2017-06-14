@@ -1,15 +1,23 @@
 const fs = require('fs');
 const path = require('path');
+const argv = require('yargs').argv;
+const colors = require('colors');
+const { noderc, browserrc } = require('./rc');
+
 const PATH = path.resolve();
+const eslintContent = null;
 
-const CONTENT = `
-  
-  
-  
-`;
+if (argv.n) {
+  eslintContent = noderc;
+
+} else if (argv.b) {
+  eslintContent = browserrc;
+
+} else {
+  eslintContent = noderc;
+}
 
 
-
-fs.writeFile(PATH + '.eslint', 'this is a test context!', (e) => {
-  console.log(e);
+fs.writeFile(PATH + '.eslintrc.js', eslintContent, (e) => {
+  console.log('Generator success!'.green);
 });
