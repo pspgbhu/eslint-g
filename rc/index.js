@@ -2,5 +2,5 @@ const noderc = require('./noderc');
 
 
 module.exports = {
-  noderc,
+  JSON.stringify(noderc),
 };

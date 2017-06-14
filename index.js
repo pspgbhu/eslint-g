@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const argv = require('yargs').argv;
 const colors = require('colors');
-const { noderc, browserrc } = require('./rc');
+const { noderc } = require('./rc');
 
 const PATH = path.resolve();
 const eslintContent = null;
@@ -11,7 +11,7 @@ if (argv.n) {
   eslintContent = noderc;
 
 } else if (argv.b) {
-  eslintContent = browserrc;
+  // eslintContent = browserrc;
 
 } else {
   eslintContent = noderc;
