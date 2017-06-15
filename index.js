@@ -20,6 +20,6 @@ if (argv.n) {
 }
 
 
-fs.writeFile(PATH + '.eslintrc.js', eslintContent, (e) => {
+fs.writeFile(PATH + '/.eslintrc.js', eslintContent, (e) => {
   console.log('Generator success!'.green);
 });
