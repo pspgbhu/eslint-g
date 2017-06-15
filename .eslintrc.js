@@ -1,20 +1,4 @@
-const exec = require('child_process').exec;
-const plugins = ['eslint', 'eslint-config-airbnb-base', 'eslint-plugin-import'];
-
-exec('cnpm i -D ' + plugins.join(' '), function(err, stdout, stderr) {
-  if (err) {
-    console.log(err);
-  }
-
-  console.log(stdout);
-
-  if (stderr) {
-    console.log(stderr);
-  }
-});
-
-module.exports =
-`module.exports = {
+module.exports = {
   root: true,
   "env": {
     "browser": false,
@@ -41,4 +25,3 @@ module.exports =
     "max-len":0
   }
 };
-`;

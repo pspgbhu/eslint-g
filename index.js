@@ -7,7 +7,7 @@ const colors = require('colors');
 const { noderc } = require('./rc');
 
 const PATH = path.resolve();
-const eslintContent = null;
+let eslintContent = null;
 
 if (argv.n) {
   eslintContent = noderc;
@@ -21,5 +21,6 @@ if (argv.n) {
 
 
 fs.writeFile(PATH + '/.eslintrc.js', eslintContent, (e) => {
-  console.log('Generator success!'.green);
+  console.log('Generator .eslintrc.js success!'.green);
+  console.log('Installing devDependencies packages'.blue);
 });
