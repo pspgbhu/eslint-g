@@ -1,5 +1,22 @@
 {
+  "name": "eslint-g",
+  "version": "0.1.0",
+  "description": "Generator eslint config for pspgbhu",
+  "main": "index.js",
+  "bin": {
+    "eslint-g": "./bin/eslint-g"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "generator"
+  ],
+  "author": "pspgbhu",
+  "license": "MIT",
   "dependencies": {
-    "shelljs": "^0.7.8"
+    "colors": "^1.1.2",
+    "yargs": "^8.0.2"
   }
 }
