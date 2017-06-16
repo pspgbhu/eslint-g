@@ -7,7 +7,8 @@
     "eslint-g": "./bin/eslint-g"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch": "npm version patch && npm publish"
   },
   "keywords": [
     "eslint",
