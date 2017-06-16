@@ -39,6 +39,7 @@ module.exports =
     "linebreak-style":0,
     "max-len":0,
     "no-shadow": ["error", { "allow": ["err", "error"] }],
+    "func-names": 0,
   }
 };
 `;
