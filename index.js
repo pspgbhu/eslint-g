@@ -15,6 +15,14 @@ if (argv.n) {
 } else if (argv.b) {
   // eslintContent = browserrc;
 
+} else if (argv.h) {
+  console.log('-n node rules');
+  console.log('-b browser rules');
+  console.log('-r react rules, cannot use yet!!');
+  console.log('-v vue rules, cannot use yet!!');
+
+  return;
+
 } else {
   eslintContent = noderc;
 }
