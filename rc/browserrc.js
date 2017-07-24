@@ -1,19 +1,4 @@
-const exec = require('child_process').exec;
 const plugins = ['eslint', 'eslint-config-airbnb-base', 'eslint-plugin-import'];
-
-function install() {
-  exec('cnpm i -D ' + plugins.join(' '), function(err, stdout, stderr) {
-    if (err) {
-      console.log(err);
-    }
-
-    console.log(stdout);
-
-    if (stderr) {
-      console.log(stderr);
-    }
-  });
-}
 
 rc =
 `module.exports = {
@@ -46,4 +31,4 @@ rc =
 };
 `;
 
-module.exports = { rc, install };
+module.exports = { rc, plugins };
