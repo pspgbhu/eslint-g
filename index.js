@@ -13,7 +13,10 @@ if (argv.n) {
   eslintContent = noderc;
 
 } else if (argv.b) {
-  // eslintContent = browserrc;
+  eslintContent = browserrc;
+
+} else if (argv.r) {
+  eslintContent = reactrc;
 
 } else if (argv.h) {
   console.log('-n node rules');
