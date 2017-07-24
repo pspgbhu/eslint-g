@@ -1,5 +1,5 @@
 # eslint-generator
-eslint config file generator. 主要是为了自己能够快速生成满足自身习惯的 eslint 配置文件，
+eslint config file generator. 主要是为了能够快速生成满足自身习惯的 eslint 配置文件，
 
 ## Install
 
