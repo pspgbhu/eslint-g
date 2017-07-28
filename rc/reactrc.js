@@ -7,8 +7,7 @@ const plugins = [
 ];
 
 rc =
-`
-module.exports = {
+`module.exports = {
   "parser": "babel-eslint",
   "plugins": [
     "react"
@@ -27,8 +26,12 @@ module.exports = {
     "node": true,
     "mocha": true
   },
+  "settings": {
+    "import/resolver": "webpack"
+  },
+  "extends": 'airbnb-base',
   "rules": {
-    "comma-dangle": 1,
+    "comma-dangle": 0,
     "quotes": [ 1, "single" ],
     "no-undef": 1,
     "global-strict": 0,
@@ -39,6 +42,7 @@ module.exports = {
     "no-trailing-spaces": [1, { "skipBlankLines": true }],
     "no-unreachable": 1,
     "no-alert": 0,
+    "class-methods-use-this": 0,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1
   }
