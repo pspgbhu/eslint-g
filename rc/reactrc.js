@@ -42,6 +42,7 @@ rc =
     "no-trailing-spaces": [1, { "skipBlankLines": true }],
     "no-unreachable": 1,
     "no-alert": 0,
+	"arrow-body-style": 0,
     "class-methods-use-this": 0,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1
