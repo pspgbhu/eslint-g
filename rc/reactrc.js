@@ -31,6 +31,7 @@ rc =
   },
   "extends": 'airbnb-base',
   "rules": {
+	"no-restricted-syntax": ["off", "BinaryExpression[operator='in']"],
     "comma-dangle": 0,
     "quotes": [ 1, "single" ],
     "no-undef": 1,
