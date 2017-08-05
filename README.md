@@ -27,7 +27,7 @@ react 环境
 eslint-g -r
 ```
 
-browser 通用配置
+browser 环境 
 ```bash
 eslint-g -b
 ```
