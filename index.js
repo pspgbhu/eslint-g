@@ -71,3 +71,10 @@ function install(plugins) {
     }
   });
 }
+
+
+/*
+TODO:
+1. 提取公共规则，规则生成采取 公共 + 独有 的方式。
+
+*/
