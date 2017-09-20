@@ -59,7 +59,7 @@ if (!showHelp) {
 }
 
 function install(plugins) {
-  exec('cnpm i -D ' + plugins.join(' '), function(err, stdout, stderr) {
+  exec('npm i -D ' + plugins.join(' '), function(err, stdout, stderr) {
     if (err) {
       console.log(err);
     }
