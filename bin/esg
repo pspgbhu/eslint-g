@@ -17,7 +17,7 @@ let rc = noderc;
 program
   .version(require('../package.json').version)
   .option('-r, --rule [rule]', 'rules of eslint')
-  .option('-i, --install [npm | yarn | cnpm]', 'the way to install eslint plugins')
+  .option('-i, --install [npm | yarn | cnpm]', 'the installer to install eslint plugins')
   .parse(process.argv);
 
 
