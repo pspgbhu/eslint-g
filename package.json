@@ -4,7 +4,7 @@
   "description": "Generator eslint config for pspgbhu",
   "main": "index.js",
   "bin": {
-    "esg": "esg"
+    "esg": "./bin/esg"
   },
   "repository": {
     "type": "git",

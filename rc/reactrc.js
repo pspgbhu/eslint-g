@@ -30,7 +30,7 @@ rc =
   "settings": {
     "import/resolver": "webpack"
   },
-  "extends": 'airbnb-base',
+  "extends": "airbnb-base",
   "rules": {
     ${commonrc}
     "comma-dangle": 0,
