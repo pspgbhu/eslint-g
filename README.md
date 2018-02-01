@@ -1,5 +1,5 @@
 # eslint-g
-快速生成常用 eslint.json 配置文件，同时安装相应的 npm 依赖包。
+快速生成常用 .eslintrc.json 配置文件，同时安装相应的 npm 依赖包。
 
 ## Install
 
