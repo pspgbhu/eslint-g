@@ -1,15 +1,14 @@
 {
   "name": "eslint-g",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Generator eslint config for pspgbhu",
   "main": "index.js",
   "bin": {
     "esg": "esg"
   },
-  "repository":
-  {
-    "type" : "git",
-    "url" : "https://github.com/pspgbhu/eslint-g"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pspgbhu/eslint-g"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
