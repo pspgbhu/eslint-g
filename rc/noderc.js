@@ -1,22 +1,19 @@
+const commonrc = require('./commonrc');
 const plugins = ['eslint', 'eslint-config-airbnb-base', 'eslint-plugin-import'];
 
-
 rc =
-`module.exports = {
-  root: true,
+`{
   "env": {
-    "browser": false,
-    "node": true,
+      "browser": false,
+      "commonjs": true,
+      "es6": true,
+      "node": true
   },
-  extends: 'airbnb-base',
-  "plugins": [
-    "import"
-  ],
-  // add your custom rules here
-  rules: {
-    "no-restricted-syntax": ["off", "BinaryExpression[operator='in']"],
+  "extends": "airbnb-base",
+  "rules": {
+    ${commonrc}
     "import/imports-first": 0,
-    'import/no-dynamic-require': 0,
+    "import/no-dynamic-require": 0,
     "no-unused-vars": 1,
     "no-console": 0,
     "no-underscore-dangle": 0,
@@ -27,9 +24,11 @@ rc =
     "linebreak-style":0,
     "max-len":0,
     "no-shadow": ["error", { "allow": ["err", "error"] }],
+    "no-use-before-define": 0,
     "func-names": 0,
+    "no-multi-assign": 0
   }
-};
+}
 `;
 
 module.exports = { rc, plugins };

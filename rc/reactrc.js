@@ -1,3 +1,4 @@
+const commonrc = require('./commonrc');
 const plugins = [
   'eslint',
   'eslint-config-airbnb-base',
@@ -7,8 +8,7 @@ const plugins = [
 ];
 
 rc =
-`
-module.exports = {
+`{
   "parser": "babel-eslint",
   "plugins": [
     "react"
@@ -32,6 +32,7 @@ module.exports = {
   },
   "extends": 'airbnb-base',
   "rules": {
+    ${commonrc}
     "comma-dangle": 0,
     "quotes": [ 1, "single" ],
     "no-undef": 1,
