@@ -1,7 +1,7 @@
 const commonrc = require('./commonrc');
 const plugins = ['eslint', 'eslint-config-airbnb-base', 'eslint-plugin-import'];
 
-rc =
+const rc =
 `{
   "root": true,
   "env": {
@@ -32,4 +32,7 @@ rc =
 }
 `;
 
-module.exports = { rc, plugins };
+const ignore =
+  ``;
+
+module.exports = { rc, plugins, ignore };

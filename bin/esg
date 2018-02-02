@@ -65,23 +65,25 @@ function install(_rc, _way) {
     _way = 'npm';
   }
 
-  writeFile(_rc.rc)
-    .then(() =>  { installPlugins(_rc.plugins, _way) })
-    .catch(e => {
-      console.log(e);
-    });
+  Promise.all([
+    writeFile(_rc.ignore, path.resolve() + '/.eslintignore'),
+    writeFile(_rc.rc, path.resolve() + '/.eslintrc.json')
+  ]).then(() => {
+    console.log('generated .eslintrcignore'.green);
+    console.log('generated .eslintrc.json'.green);
+    installPlugins(_rc.plugins, _way)
+  }).catch(e => {
+    console.log(e.red);
+  });
 }
 
 
-function writeFile(content) {
+function writeFile(content, file) {
   return new Promise((resolve, reject) => {
-    fs.writeFile(path.resolve() + '/.eslintrc.json', content, (e) => {
+    fs.writeFile(file, content, (e) => {
       if (e) {
         reject(e);
       }
-      console.log(' ');
-      console.log('Generate .eslintrc.json file success!'.green);
-      console.log(' ');
       resolve();
     });
   });
@@ -109,12 +111,13 @@ function installPlugins(plugins, _way) {
     ways[_way]();
   } catch (error) {
     spinner.stop();
-    console.log(error);
+    console.log('ways error');
+    console.log(error.red);
   }
 
   function callback(err, stdout, stderr) {
     spinner.stop();
-    if (err) { console.log(err); }
+    if (err) { console.log(err); return; }
     console.log(stdout);
     if (stderr) { console.log(stderr); }
   }

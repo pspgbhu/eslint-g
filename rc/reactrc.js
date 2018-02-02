@@ -7,7 +7,7 @@ const plugins = [
   'eslint-plugin-react'
 ];
 
-rc =
+const rc =
 `{
   "parser": "babel-eslint",
   "plugins": [
@@ -53,4 +53,11 @@ rc =
 }
 `;
 
-module.exports = { rc, plugins };
+const ignore =
+`build/*.js
+config/*.js
+public/*.js
+scripts/*.js
+`;
+
+module.exports = { rc, plugins, ignore };

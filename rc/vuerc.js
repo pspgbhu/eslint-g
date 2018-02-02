@@ -57,4 +57,9 @@ const rc =
 }
 `
 
-module.exports = { rc, plugins };
+const ignore =
+`build/*.js
+config/*.js
+`;
+
+module.exports = { rc, plugins, ignore };
