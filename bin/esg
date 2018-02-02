@@ -21,18 +21,23 @@ program
   .parse(process.argv);
 
 
+console.log(program.rule);
 if (program.rule) {
   switch (program.rule) {
-    case ('b' || 'browser'):
+    case 'b':
+    case 'browser':
       rc = browserrc;
       break;
-    case ('r' || 'react'):
+    case 'r':
+    case 'react':
       rc = reactrc;
       break;
-    case ('v' || 'vue'):
+    case 'v':
+    case 'vue':
       rc = vuerc;
       break;
-    case ('n' || 'node'):
+    case 'n':
+    case 'node':
     default:
       rc = noderc;
       break;
@@ -54,6 +59,7 @@ if (program.install) {
   }
 }
 
+console.log(rc);
 install(rc, way);
 
 function install(_rc, _way) {
@@ -115,4 +121,3 @@ function installPlugins(plugins, _way) {
     if (stderr) { console.log(stderr); }
   }
 }
-
