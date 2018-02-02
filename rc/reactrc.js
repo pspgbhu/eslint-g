@@ -50,7 +50,7 @@ rc =
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1
   }
-};
+}
 `;
 
 module.exports = { rc, plugins };
