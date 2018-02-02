@@ -21,7 +21,6 @@ program
   .parse(process.argv);
 
 
-console.log(program.rule);
 if (program.rule) {
   switch (program.rule) {
     case 'b':
@@ -59,7 +58,6 @@ if (program.install) {
   }
 }
 
-console.log(rc);
 install(rc, way);
 
 function install(_rc, _way) {
