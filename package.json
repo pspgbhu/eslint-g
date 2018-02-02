@@ -1,6 +1,6 @@
 {
   "name": "eslint-g",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generator eslint config for pspgbhu",
   "main": "index.js",
   "bin": {
