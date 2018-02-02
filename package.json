@@ -13,7 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "patch": "npm version patch && npm publish",
-    "postversion": "npm publish && git push --follow-tags"
+    "postversion": "npm publish && git push"
   },
   "keywords": [
     "eslint",
