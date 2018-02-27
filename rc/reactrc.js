@@ -28,7 +28,14 @@ const rc =
     "mocha": true
   },
   "settings": {
-    "import/resolver": "webpack"
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    }
   },
   "extends": "airbnb-base",
   "rules": {
