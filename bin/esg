@@ -58,9 +58,7 @@ if (program.install) {
   }
 }
 
-if (program.plugins) {
-  install(rc, way);
-}
+install(rc, way);
 
 function install(_rc, _way) {
   if (['npm', 'yarn', 'cnpm'].indexOf(_way) < 0) {
@@ -71,9 +69,13 @@ function install(_rc, _way) {
     writeFile(_rc.ignore, path.resolve() + '/.eslintignore'),
     writeFile(_rc.rc, path.resolve() + '/.eslintrc'),
   ]).then(() => {
+
     console.log('generated .eslintrcignore'.green);
     console.log('generated .eslintrc'.green);
-    installPlugins(_rc.plugins, _way);
+    if (program.plugins) {
+
+      installPlugins(_rc.plugins, _way);
+    }
   }).catch(e => {
     console.log(e.red);
   });
