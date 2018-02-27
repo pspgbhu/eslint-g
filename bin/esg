@@ -18,8 +18,8 @@ program
   .version(require('../package.json').version)
   .option('-r, --rule [rule]', 'rules of eslint')
   .option('-i, --install [npm | yarn | cnpm]', 'the installer to install eslint plugins')
+  .option('--no-plugins', 'Only generate rules file, do not install plugins.')
   .parse(process.argv);
-
 
 if (program.rule) {
   switch (program.rule) {
@@ -58,7 +58,9 @@ if (program.install) {
   }
 }
 
-install(rc, way);
+if (program.plugins) {
+  install(rc, way);
+}
 
 function install(_rc, _way) {
   if (['npm', 'yarn', 'cnpm'].indexOf(_way) < 0) {
@@ -67,7 +69,7 @@ function install(_rc, _way) {
 
   Promise.all([
     writeFile(_rc.ignore, path.resolve() + '/.eslintignore'),
-    writeFile(_rc.rc, path.resolve() + '/.eslintrc.json')
+    writeFile(_rc.rc, path.resolve() + '/.eslintrc')
   ]).then(() => {
     console.log('generated .eslintrcignore'.green);
     console.log('generated .eslintrc.json'.green);
