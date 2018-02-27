@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-const exec = require('child_process').exec;
+const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const program = require('commander');
-const colors = require('colors');
 const ora = require('ora');
 const browserrc = require('../rc/browserrc');
 const noderc = require('../rc/noderc');
 const vuerc = require('../rc/vuerc');
 const reactrc = require('../rc/reactrc');
+require('colors');
 
 let way = 'npm';
 let rc = noderc;
@@ -51,7 +51,7 @@ if (program.install) {
       break;
     case 'cnpm':
       way = 'cnpm';
-      break ;
+      break;
     case 'npm':
     default:
       break;
@@ -69,11 +69,11 @@ function install(_rc, _way) {
 
   Promise.all([
     writeFile(_rc.ignore, path.resolve() + '/.eslintignore'),
-    writeFile(_rc.rc, path.resolve() + '/.eslintrc')
+    writeFile(_rc.rc, path.resolve() + '/.eslintrc'),
   ]).then(() => {
     console.log('generated .eslintrcignore'.green);
-    console.log('generated .eslintrc.json'.green);
-    installPlugins(_rc.plugins, _way)
+    console.log('generated .eslintrc'.green);
+    installPlugins(_rc.plugins, _way);
   }).catch(e => {
     console.log(e.red);
   });
@@ -93,7 +93,7 @@ function writeFile(content, file) {
 
 
 function installPlugins(plugins, _way) {
-  var spinner = ora('Downloading eslint plugins');
+  const spinner = ora('Downloading eslint plugins');
   spinner.start();
   const ways = {
     npm() {

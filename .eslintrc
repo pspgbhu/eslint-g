@@ -1,8 +1,4 @@
-const commonrc = require('./commonrc');
-const plugins = ['eslint', 'eslint-config-airbnb-base', 'eslint-plugin-import'];
-
-const rc =
-`{
+{
   "env": {
       "browser": false,
       "commonjs": true,
@@ -11,7 +7,7 @@ const rc =
   },
   "extends": "airbnb-base",
   "rules": {
-    ${commonrc}
+    
     "import/imports-first": 0,
     "import/no-dynamic-require": 0,
     "no-unused-vars": 1,
@@ -30,9 +26,3 @@ const rc =
     "prefer-template": 0
   }
 }
-`;
-
-const ignore =
-  ``;
-
-module.exports = { rc, plugins, ignore };
