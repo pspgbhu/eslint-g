@@ -41,7 +41,6 @@ const rc =
   "rules": {
     ${commonrc}
     "arrow-body-style": 0,
-    "comma-dangle": 0,
     "class-methods-use-this": 0,
     "function-paren-newline": 0,
     "global-strict": 0,
