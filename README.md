@@ -48,3 +48,7 @@ example:
 ```bash
 $ esg -i yarn # 使用 yarn 来安装相关依赖
 ```
+
+### **--no-plugins**
+
+禁止自动安装 npm 相关依赖包，仅仅生成 `.eslintrc` 规则文件。
