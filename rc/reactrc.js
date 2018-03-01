@@ -1,10 +1,11 @@
 const commonrc = require('./commonrc');
+
 const plugins = [
   'eslint',
   'eslint-config-airbnb-base',
   'eslint-plugin-import',
   'eslint-import-resolver-webpack',
-  'eslint-plugin-react'
+  'eslint-plugin-react',
 ];
 
 const rc =
@@ -40,21 +41,8 @@ const rc =
   "extends": "airbnb-base",
   "rules": {
     ${commonrc}
-    "arrow-body-style": 0,
-    "class-methods-use-this": 0,
-    "function-paren-newline": 0,
-    "global-strict": 0,
-    "no-extra-semi": 1,
-    "no-underscore-dangle": 0,
-    "no-console": 0,
-    "no-unused-vars": 1,
-    "no-use-before-define": ["error", { "functions": false, "classes": false }],
-    "no-trailing-spaces": [1, { "skipBlankLines": true }],
-    "no-unreachable": 1,
-    "no-alert": 0,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1
-    "quotes": [ 1, "single" ],
   }
 }
 `;
